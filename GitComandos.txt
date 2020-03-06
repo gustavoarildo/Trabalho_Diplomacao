@@ -1,0 +1,22 @@
+git clone https://github.com/gustavoarildo/Trabalho_Diplomacao.git
+ou git pull --commit
+
+git checkout -b feature/issue-n
+
+git status
+
+git add .
+
+git commit -am "#n: mensagem"
+
+git checkout master
+
+git merge feature/issue-n
+
+git branch -d feature/issue-n
+
+git push -u origin --all
+
+git tag -a vN.0 -m "versao N.0"
+
+git push -u origin --tags
