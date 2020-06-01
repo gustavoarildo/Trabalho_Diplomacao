@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rfinanceiros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id rf</th>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Valormensalidade</th>
+      <th>Debitototal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rfinanceiros.each do |rfinanceiro| %>
+      <tr>
+        <td><%= rfinanceiro.id_rf %></td>
+        <td><%= rfinanceiro.nome %></td>
+        <td><%= rfinanceiro.telefone %></td>
+        <td><%= rfinanceiro.valorMensalidade %></td>
+        <td><%= rfinanceiro.debitoTotal %></td>
+        <td><%= link_to 'Show', rfinanceiro %></td>
+        <td><%= link_to 'Edit', edit_rfinanceiro_path(rfinanceiro) %></td>
+        <td><%= link_to 'Destroy', rfinanceiro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rfinanceiro', new_rfinanceiro_path %>

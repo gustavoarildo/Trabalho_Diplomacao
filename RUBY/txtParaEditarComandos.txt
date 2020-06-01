@@ -1,0 +1,9 @@
+EXEMPLO CRIAÇAO CRUD
+rails generate scaffold appwebexemp nome:string id_seq:string endereco:text preco:decimal email:string
+
+rails generate scaffold rfinanceiro id_rf:integer nome:string telefone:integer valorMensalidade:decimal debitoTotal:decimal
+
+EXEMPLO DESTRUIÇAO CRUD
+ 'rails destroy scaffold ModelName'.
+
+ rails destroy scaffold rfinanceiro

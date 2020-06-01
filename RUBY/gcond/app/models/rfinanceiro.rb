@@ -1,0 +1,2 @@
+class Rfinanceiro < ApplicationRecord
+end

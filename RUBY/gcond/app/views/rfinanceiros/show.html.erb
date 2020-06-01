@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id rf:</strong>
+  <%= @rfinanceiro.id_rf %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @rfinanceiro.nome %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @rfinanceiro.telefone %>
+</p>
+
+<p>
+  <strong>Valormensalidade:</strong>
+  <%= @rfinanceiro.valorMensalidade %>
+</p>
+
+<p>
+  <strong>Debitototal:</strong>
+  <%= @rfinanceiro.debitoTotal %>
+</p>
+
+<%= link_to 'Edit', edit_rfinanceiro_path(@rfinanceiro) %> |
+<%= link_to 'Back', rfinanceiros_path %>

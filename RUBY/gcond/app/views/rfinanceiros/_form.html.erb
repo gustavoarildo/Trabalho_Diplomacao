@@ -1,0 +1,42 @@
+<%= form_with(model: rfinanceiro, local: true) do |form| %>
+  <% if rfinanceiro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rfinanceiro.errors.count, "error") %> prohibited this rfinanceiro from being saved:</h2>
+
+      <ul>
+        <% rfinanceiro.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_rf %>
+    <%= form.number_field :id_rf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.number_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorMensalidade %>
+    <%= form.text_field :valorMensalidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :debitoTotal %>
+    <%= form.text_field :debitoTotal %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
