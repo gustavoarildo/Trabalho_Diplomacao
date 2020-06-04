@@ -1,0 +1,42 @@
+<%= form_with(model: demonstrativo, local: true) do |form| %>
+  <% if demonstrativo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(demonstrativo.errors.count, "error") %> prohibited this demonstrativo from being saved:</h2>
+
+      <ul>
+        <% demonstrativo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_mesano %>
+    <%= form.number_field :id_mesano %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valordespesatotal %>
+    <%= form.text_field :valordespesatotal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receitaestimada %>
+    <%= form.text_field :receitaestimada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inadimplencia %>
+    <%= form.text_field :inadimplencia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receitamenosinadimplencia %>
+    <%= form.text_field :receitamenosinadimplencia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

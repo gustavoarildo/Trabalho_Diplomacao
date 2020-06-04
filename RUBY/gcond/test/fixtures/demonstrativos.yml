@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_mesano: 1
+  valordespesatotal: 9.99
+  receitaestimada: 9.99
+  inadimplencia: 9.99
+  receitamenosinadimplencia: 9.99
+
+two:
+  id_mesano: 1
+  valordespesatotal: 9.99
+  receitaestimada: 9.99
+  inadimplencia: 9.99
+  receitamenosinadimplencia: 9.99

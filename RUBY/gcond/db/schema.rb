@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_172534) do
+ActiveRecord::Schema.define(version: 2020_06_04_180703) do
+
+  create_table "conddespesas", force: :cascade do |t|
+    t.integer "id_cd"
+    t.string "nomedespesa"
+    t.decimal "valordespesa"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "demonstrativos", force: :cascade do |t|
+    t.integer "id_mesano"
+    t.decimal "valordespesatotal"
+    t.decimal "receitaestimada"
+    t.decimal "inadimplencia"
+    t.decimal "receitamenosinadimplencia"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "rfinanceiros", force: :cascade do |t|
     t.integer "id_rf"

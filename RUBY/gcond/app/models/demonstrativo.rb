@@ -1,0 +1,2 @@
+class Demonstrativo < ApplicationRecord
+end

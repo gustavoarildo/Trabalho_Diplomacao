@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id cd:</strong>
+  <%= @conddespesa.id_cd %>
+</p>
+
+<p>
+  <strong>Nomedespesa:</strong>
+  <%= @conddespesa.nomedespesa %>
+</p>
+
+<p>
+  <strong>Valordespesa:</strong>
+  <%= @conddespesa.valordespesa %>
+</p>
+
+<%= link_to 'Edit', edit_conddespesa_path(@conddespesa) %> |
+<%= link_to 'Back', conddespesas_path %>

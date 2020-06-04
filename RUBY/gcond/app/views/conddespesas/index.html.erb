@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conddespesas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id cd</th>
+      <th>Nomedespesa</th>
+      <th>Valordespesa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conddespesas.each do |conddespesa| %>
+      <tr>
+        <td><%= conddespesa.id_cd %></td>
+        <td><%= conddespesa.nomedespesa %></td>
+        <td><%= conddespesa.valordespesa %></td>
+        <td><%= link_to 'Show', conddespesa %></td>
+        <td><%= link_to 'Edit', edit_conddespesa_path(conddespesa) %></td>
+        <td><%= link_to 'Destroy', conddespesa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conddespesa', new_conddespesa_path %>

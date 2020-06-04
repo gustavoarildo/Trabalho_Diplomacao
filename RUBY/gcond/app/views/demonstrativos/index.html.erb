@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demonstrativos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id mesano</th>
+      <th>Valordespesatotal</th>
+      <th>Receitaestimada</th>
+      <th>Inadimplencia</th>
+      <th>Receitamenosinadimplencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demonstrativos.each do |demonstrativo| %>
+      <tr>
+        <td><%= demonstrativo.id_mesano %></td>
+        <td><%= demonstrativo.valordespesatotal %></td>
+        <td><%= demonstrativo.receitaestimada %></td>
+        <td><%= demonstrativo.inadimplencia %></td>
+        <td><%= demonstrativo.receitamenosinadimplencia %></td>
+        <td><%= link_to 'Show', demonstrativo %></td>
+        <td><%= link_to 'Edit', edit_demonstrativo_path(demonstrativo) %></td>
+        <td><%= link_to 'Destroy', demonstrativo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demonstrativo', new_demonstrativo_path %>

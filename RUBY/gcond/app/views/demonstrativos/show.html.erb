@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id mesano:</strong>
+  <%= @demonstrativo.id_mesano %>
+</p>
+
+<p>
+  <strong>Valordespesatotal:</strong>
+  <%= @demonstrativo.valordespesatotal %>
+</p>
+
+<p>
+  <strong>Receitaestimada:</strong>
+  <%= @demonstrativo.receitaestimada %>
+</p>
+
+<p>
+  <strong>Inadimplencia:</strong>
+  <%= @demonstrativo.inadimplencia %>
+</p>
+
+<p>
+  <strong>Receitamenosinadimplencia:</strong>
+  <%= @demonstrativo.receitamenosinadimplencia %>
+</p>
+
+<%= link_to 'Edit', edit_demonstrativo_path(@demonstrativo) %> |
+<%= link_to 'Back', demonstrativos_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: conddespesa, local: true) do |form| %>
+  <% if conddespesa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conddespesa.errors.count, "error") %> prohibited this conddespesa from being saved:</h2>
+
+      <ul>
+        <% conddespesa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_cd %>
+    <%= form.number_field :id_cd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomedespesa %>
+    <%= form.text_field :nomedespesa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valordespesa %>
+    <%= form.text_field :valordespesa %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

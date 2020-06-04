@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_cd: 1
+  nomedespesa: MyString
+  valordespesa: 9.99
+
+two:
+  id_cd: 1
+  nomedespesa: MyString
+  valordespesa: 9.99
