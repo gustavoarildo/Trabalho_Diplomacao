@@ -1,5 +1,8 @@
 class ConddespesasController < ApplicationController
   before_action :set_conddespesa, only: [:show, :edit, :update, :destroy]
+  
+
+
 
   # GET /conddespesas
   # GET /conddespesas.json

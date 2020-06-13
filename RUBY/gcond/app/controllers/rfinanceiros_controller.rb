@@ -1,5 +1,10 @@
 class RfinanceirosController < ApplicationController
+
   before_action :set_rfinanceiro, only: [:show, :edit, :update, :destroy]
+ 
+
+
+
 
   # GET /rfinanceiros
   # GET /rfinanceiros.json

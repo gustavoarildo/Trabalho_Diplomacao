@@ -1,5 +1,11 @@
 class DemonstrativosController < ApplicationController
+
   before_action :set_demonstrativo, only: [:show, :edit, :update, :destroy]
+ 
+
+
+
+
 
   # GET /demonstrativos
   # GET /demonstrativos.json
