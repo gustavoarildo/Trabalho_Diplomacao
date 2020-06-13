@@ -1,7 +1,7 @@
 class DemonstrativosController < ApplicationController
 
   before_action :set_demonstrativo, only: [:show, :edit, :update, :destroy]
- 
+  before_action :authenticate_user!
 
 
 

@@ -1,7 +1,7 @@
 class RfinanceirosController < ApplicationController
 
   before_action :set_rfinanceiro, only: [:show, :edit, :update, :destroy]
- 
+  before_action :authenticate_user!
 
 
 

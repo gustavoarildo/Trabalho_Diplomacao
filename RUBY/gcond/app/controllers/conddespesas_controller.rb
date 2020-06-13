@@ -1,6 +1,6 @@
 class ConddespesasController < ApplicationController
   before_action :set_conddespesa, only: [:show, :edit, :update, :destroy]
-  
+  before_action :authenticate_user!
 
 
 
