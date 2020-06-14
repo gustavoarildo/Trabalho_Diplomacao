@@ -18,22 +18,38 @@
 
   <div class="field">
     <%= form.label :valordespesatotal %>
+    <% begin %>
     <%= form.text_field :valordespesatotal, :value => Conddespesa.all.sum(:valordespesa) %>
+    <% rescue => e%>
+    <%= form.text_field :valordespesatotal, :value => 0 %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :receitaestimada %>
+    <% begin %>
     <%= form.text_field :receitaestimada , :value => Rfinanceiro.all.sum(:valormensalidade)%>
+    <% rescue => e%>
+    <%= form.text_field :receitaestimada , :value => 0 %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :inadimplencia %>
+    <% begin %>
     <%= form.text_field :inadimplencia , :value => Rfinanceiro.all.sum(:debitototal)%>
+    <% rescue => e%>
+    <%= form.text_field :inadimplencia , :value => 0 %>
+    <% end %>
   </div>
 
   <div class="field">
     <%= form.label :receitamenosinadimplencia %>
+    <% begin %>
     <%= form.text_field :receitamenosinadimplencia , :value => Rfinanceiro.all.sum(:valormensalidade) - Rfinanceiro.all.sum(:debitototal) %>
+    <% rescue => e%>
+    <%= form.text_field :receitamenosinadimplencia , :value => 0 %>
+    <% end %>
   </div>
 
   <div class="actions">

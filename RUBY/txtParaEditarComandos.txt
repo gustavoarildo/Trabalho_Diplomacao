@@ -14,3 +14,6 @@ rails generate scaffold demonstrativo id_mesano:integer valordespesatotal:decima
 
  3)EXEMPLO MIGRAÇÃO DE BANCO DE DADOS
  rake db:migrate
+
+ 4)IF ELSE
+ if != nill return Conddespesa.all.sum(:valordespesa) else return 0 end
